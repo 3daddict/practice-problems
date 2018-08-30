@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>do math</title>
+    <script>
+        var num1 = 0;
+        var num2 = 0;
+        var operator = "";
+        var calculatedAnswer;
+
+        function do_math(num1, num2, operator) {
+            if (operator === "+") {
+                calculatedAnswer = num1 + num2;
+            } else if (operator === "-") {
+                calculatedAnswer = num1 - num2;
+            } else if (operator === "*" || operator === "x" || operator === "X") {
+                calculatedAnswer = num1 * num2;
+            } else if (operator === "/") {
+                calculatedAnswer = num1 / num2;
+            } else {
+                alert("please use a valid operator + - * /")
+            }
+            return calculatedAnswer;
+        }
+        do_math(5, 2, '*')
+        console.log(calculatedAnswer);
+    </script>
+</head>
+
+<body>
+<p>
+    Build a function, do_math, that takes in 3 parameters: num1 (number), num2 (number), and operator (string)
+    <br>
+    it uses the operator to determine what math to do to the numbers<br>
+    if '+', it adds them<br>
+    if '-', it subtracts them<br>
+    if '*' or 'x' or 'X', it multiplies them<br>
+    if '/', it divides them<br>
+    if then returns the result<br>
+    Example:<br>
+    do_math(5,2,'*')<br>
+    Return: 10<br>
+</p>
+</body>
+
+</html>
