@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>alternate caps</title>
+    <script>
+    
+    var inputString = "amazing";
+    var answerString = '';
+
+    function convertEveryOtherToCaps(parameterString){
+        for(var i = 0; i < parameterString.length; i++){
+            //console.log('Running')
+            if(i % 2){
+                //console.log('Modulo Even: ' + parameterString[i])
+                answerString += parameterString[i].toUpperCase();
+            } else {
+                //console.log('Modulo Odd: ' + parameterString[i])
+                answerString += parameterString[i]
+            }
+        }
+        return answerString;
+    }
+    convertEveryOtherToCaps(inputString);
+    console.log('Answer: ' + answerString);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
