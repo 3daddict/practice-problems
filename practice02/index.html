@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Total Reverse</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script>
+
+    var myArray = ['hello', 45, 'Bob', 'what', '23'];
+    var reversedArray = [];
+
+    function reverseArray(stringInput){
+        for (i = myArray.length - 1; i >= 0; i--){
+            reversedArray.push(stringInput[i]);
+        }
+        return reverseArray;
+    }
+
+    reverseArray(myArray);
+    console.log('reverseArray: ' + reversedArray);
+
+    </script>
+</head>
+
+<body>
+    <p>
+        Build a function that takes in an array and reverses it <br>
+
+        Write a function that takes one parameter <br>
+        Parameter 1 - An array of anything <br>
+        The function should output an array that is in reverse order from the input array <br>
+        Example: <br>
+        var myArray = ['hello', 45, 'Bob', 'what', '23']; <br>
+        arrayReverse(myArray); <br>
+        Output - ['23', 'what', 'Bob', 45, 'hello'] <br>
+        Avoid using pre-built functions that do something similar <br>
+
+    </p>
+</body>
+
+</html>
