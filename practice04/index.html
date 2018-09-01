@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sort</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+
+        var myArray = ['mouse', 'cat', 'dog', 'human'];
+        var alphaArray = [];
+
+        function outputStringsAlphabetical(someArray){
+           someArray.sort();
+           return alphaArray = someArray;
+        }
+
+outputStringsAlphabetical(myArray);
+console.log('alphaArray = ' + alphaArray);
+    </script>
+</head>
+
+<body>
+    <p>
+        Build a function that takes in an array of strings and outputs a new array with the same strings in alphabetical order. <br>
+
+        Write a function that takes one parameter <br>
+        Parameter 1 - An Array of strings <br>
+        The function should output an array containing all the strings from the input array but in alphabetical order <br>
+        Example: -var myArray = ['mouse', 'cat', 'dog', 'human']; <br>
+        sort(myArray); <br>
+        Output - ['cat', 'dog', 'human', 'mouse'] <br>
+        Try doing this using a Bubble Sort, if you are unsure what that is Click Here <br>
+        
+        <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-24.php">JavaScript: Bubble Sort algorithm</a>
+
+    </p>
+</body>
+
+</html>
