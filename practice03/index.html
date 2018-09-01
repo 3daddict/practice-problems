@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One to Multi</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+        var outputArray = [];
+
+        function createMultiArray(arrayInput) {
+            var stringsArr = [];
+            var numbersArr = [];
+            var booleanArr = [];
+
+            for (var i = 0; i < arrayInput.length; i++) {
+                if(typeof arrayInput[i] === 'string'){
+                    stringsArr.push(arrayInput[i]);
+                } else if(typeof arrayInput[i] === 'number'){
+                    numbersArr.push(arrayInput[i]);
+                } else if(typeof arrayInput[i] === 'boolean'){
+                    booleanArr.push(arrayInput[i]);
+                } else {
+                    outputArray.push(arrayInput[i]);
+                }
+            }
+            outputArray.push(stringsArr, numbersArr, booleanArr);
+            // console.log('stringsArr: ' + stringsArr);
+            // console.log('numbersArr: ' + numbersArr);
+            // console.log('booleanArr: ' + booleanArr);
+            return outputArray;
+        }
+
+        createMultiArray(myArray);
+        
+        console.log('outputArray: ' + outputArray);
+
+    </script>
+</head>
+
+<body>
+    <p>
+        Build a function that sorts an array into a multidimensional array grouped by data type <br>
+
+        Write a function that takes one parameter <br>
+        Parameter 1 - An array of anything <br>
+        The function should output a multidimensional array grouped by data type <br>
+        Example: <br>
+        var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true]; <br>
+        groupArray(myArray); <br>
+        Output - [['hello, 'goodbye', '25'], [34, 56, 12], [true, false, true]] <br>
+
+    </p>
+</body>
+
+</html>
+
+
+<!-- var strings = [];
+var numbers = [];
+var booleans = [];
+var otherTypes = [];
+var outputArray = [];
+
+function createMultiArray(arrayInput) {
+    for (var i = 0; i < arrayInput.length; i++) {
+        switch (typeof value) {
+            case 'string':
+                strings += arrayInput[i];
+            case 'number':
+                numbers += arrayInput[i];
+            case 'boolean':
+                booleans += arrayInput[i];
+            default:
+                otherTypes += arrayInput[i];
+        }
+    }
+    console.log('strings: ' + strings);
+console.log('numbers: ' + numbers);
+console.log('booleans: ' + booleans);
+    return outputArray;
+}
+
+createMultiArray(myArray);
+
+console.log('outputArray: ' + outputArray); -->
