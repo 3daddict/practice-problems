@@ -9,33 +9,64 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script>
+        var myArray = ['mouse', 'cat', 'dog', 'human', 'zebra', 'ocelot', 'ant eater', 'pigeon'];
+        var sortedArray;
 
-        var myArray = ['mouse', 'cat', 'dog', 'human'];
-        var alphaArray = [];
-
-        function outputStringsAlphabetical(someArray){
-           someArray.sort();
-           return alphaArray = someArray;
+        function bubbleSort(arr){
+            sortedArray = false;
+            var end = arr.length - 1;
+            for(var i = 0; i < end; i++){
+                if(arr[i] > arr[i + 1]){
+                    sortedArray = true;
+                    //This is the swap part for the bubble sort
+                    var temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                }
+            }
+            end--; //decrement end cause we don't need to down to the end every time
         }
 
-outputStringsAlphabetical(myArray);
-console.log('alphaArray = ' + alphaArray);
+        do {
+            bubbleSort(myArray);
+        } while (sortedArray); //do the bubble sort function while swapped is = true
+
+        console.log(myArray);
+
+        //reference https://www.youtube.com/watch?v=IJf5f2LsIEA;
+
+        /*
+        EASY ANSWER
+                var myArray = ['mouse', 'cat', 'dog', 'human'];
+                var alphaArray = [];
+
+                function outputStringsAlphabetical(someArray) {
+                    someArray.sort();
+                    return alphaArray = someArray;
+                }
+
+                outputStringsAlphabetical(myArray);
+                console.log('alphaArray = ' + alphaArray);
+        */
     </script>
 </head>
 
 <body>
     <p>
-        Build a function that takes in an array of strings and outputs a new array with the same strings in alphabetical order. <br>
+        Build a function that takes in an array of strings and outputs a new array with the same strings in
+        alphabetical order. <br>
 
         Write a function that takes one parameter <br>
         Parameter 1 - An Array of strings <br>
-        The function should output an array containing all the strings from the input array but in alphabetical order <br>
+        The function should output an array containing all the strings from the input array but in alphabetical order
+        <br>
         Example: -var myArray = ['mouse', 'cat', 'dog', 'human']; <br>
         sort(myArray); <br>
         Output - ['cat', 'dog', 'human', 'mouse'] <br>
         Try doing this using a Bubble Sort, if you are unsure what that is Click Here <br>
-        
-        <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-24.php">JavaScript: Bubble Sort algorithm</a>
+
+        <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-24.php">JavaScript:
+            Bubble Sort algorithm</a>
 
     </p>
 </body>
