@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numeric Spirals</title>
+    <script type="text/javascript">
+        function fibonacci(num) {
+
+            var answer = [0, 1];
+            for (var i = 2; i < num; i++) {
+                answer.push(answer[i - 2] + answer[i - 1]);
+            }
+            return answer;
+        }
+
+        console.log(fibonacci(12));
+        console.log(fibonacci(20));
+        console.log(fibonacci(50));
+    </script>
+</head>
+
+<body>
+    <p>
+        Build a function that takes one parameter and prints out the Fibonacci sequence based on the input parameter.
+        <br>
+        <br>
+        Write a function that takes one parameter <br>
+        Parameter 1 - A number <br>
+        The function should output the Fibonacci sequence to the number of spaces set by parameter 1 starting from
+        zero. <br>
+        Example: <br>
+        fibSequence(12); <br>
+        Output - 0 1 1 2 3 5 8 13 21 34 55 89 <br>
+        If you are unfamiliar with the Fibonacci sequence <a href="https://stackoverflow.com/questions/51111870/fibonacci-series-in-javascript">Click
+            Here</a> <br>
+    </p>
+</body>
+
+</html>
