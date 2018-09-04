@@ -8,8 +8,10 @@ for(<initiator 1>,<initiator 2>; <check 1>,<check2>; <increment 1>,<increment 2>
 	//do work
 }*/
 function bipolarLoop() {
-    for (i = 0, x = 20; i <= 20, x >= 0; i++ , x--) {
-      console.log(i, x);
+    for (northIndex = 0, southIndex = 20; northIndex <= 20, southIndex >= 0; northIndex++ , southIndex--) {
+      //console.log('north = ' + northIndex);
+      //console.log('south = ' + southIndex);
+      console.log('answer = ' + northIndex, southIndex);
     }
   }
   bipolarLoop();
