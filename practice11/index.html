@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Even Odds</title>
+    <script>
+    const myArray = [2,5,1,6,8,2,20,'cat',13,3];
+    let evenArray = [];
+    let oddArray = [];
+
+        function sortEvenOdd(arr){
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] % 2){
+                    evenArray.push(arr[i]);
+                } else if(arr[i] % 3) {
+                    oddArray.push(arr[i]);
+                } else {
+                    
+                }
+            }
+            return evenArray, oddArray;
+        }
+
+        sortEvenOdd(myArray);
+        console.log('evenArray = ' + evenArray);
+        console.log('oddArray = ' + oddArray);
+
+    </script>
+</head>
+<body>
+    <h1>Even Odds</h1>
+    <p>
+        Build a function that takes one array and then sorts it into odd and even numbers <br>
+        <br>
+        Write a function that takes one parameter <br>
+        Parameter 1 - an array of anything <br>
+        The function should return an object with 2 arrays in it: <br>
+        odd: an array of all the odd numbers in the array <br>
+        even: an array of all the even numbers in the array <br>
+        all non-number entities should be ignored <br>
+        repeated numbers should not be added twice <br>
+        Example: <br>
+        evenodd([2,5,1,6,8,2,20,'cat',13,3]); <br>
+        Output - { odd: [5, 1, 13, 3], even: [2, 6, 8, 20] } <br>
+        
+    </p>
+</body>
+</html>
