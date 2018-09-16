@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>math computation sequences</title>
+    <script>
+        let answer = [];
+    function math_sequences(num1, num2) {
+
+        answer.push(num1 + "+" + num2 + "= " + (num1 + num2));
+        answer.push(num1 + "-" + num2 + "= " + (num1 - num2));
+        answer.push(num1 + "*" + num2 + "= " + (num1 * num2));
+        answer.push(num1 + "/" + num2 + "= " + (num1 / num2));
+
+        return answer;
+    }
+    
+    // console.log(math_sequences(2, 5));
+    // console.log(math_sequences(23, 93));
+    // console.log(math_sequences(827, 524));
+    // console.log(math_sequences(25, 5));
+    console.log(math_sequences(2, 32));
+    </script>
+</head>
+<body>
+    <h1>math computation sequences</h1>
+    Given the following function call: <br>
+    <br>
+math_sequences(2,5);<br>
+And the resulting output:<br>
+<br>
+["2+5=7", "2-5=-3", "2*5=10", "2/5=0.4"];<br>
+Create a function definition that achieves the output with the given input.<br>
+</body>
+</html>
